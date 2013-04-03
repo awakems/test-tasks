@@ -14,5 +14,7 @@ def start_of_word (hello, num)
 hello[0 .. num-1]
 end
 
-def first_word
+def first_word (text)
+mas=text.split
+mas[0]
 end
