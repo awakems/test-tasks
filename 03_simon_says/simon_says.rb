@@ -18,3 +18,9 @@ def first_word (text)
 mas=text.split
 mas[0]
 end
+
+def titleize (word)
+arr = ['and','over','a', 'an', 'the']
+fin=word.gsub(/\w+/) {|match| arr.include?(match) ? match : match.capitalize} 
+fin[0].capitalize+fin[1..-1]
+end
