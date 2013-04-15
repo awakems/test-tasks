@@ -7,6 +7,6 @@ def reverser
   mas.join(" ")
 end
 
-def adder
-yield+1
+def adder (num=1)
+yield+num
 end
