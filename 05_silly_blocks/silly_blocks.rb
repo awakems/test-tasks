@@ -12,6 +12,7 @@ yield+num
 end
 
 
-def repeater
-yield
+def repeater (num = 1)
+num.times do yield
+end
 end
