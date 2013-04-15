@@ -6,3 +6,7 @@ def reverser
   end
   mas.join(" ")
 end
+
+def adder
+yield+1
+end
