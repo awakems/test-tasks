@@ -12,5 +12,13 @@ class Temperature
  def in_celsius
    @celsius
  end
+ 
+ def Temperature.from_celsius (celsius)
+   Temperature.new(c: celsius)
+ end
+
+ def Temperature.from_fahrenheit (farenheit)
+   Temperature.new(f: farenheit)
+ end
 
 end
