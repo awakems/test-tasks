@@ -1,7 +1,7 @@
-def translate (sen)
+def translate (sentence)
   vowels = ['a', 'e', 'i', 'o', 'u']
   consonants = ('a'..'z').to_a - vowels
-  sen.split.map! {|x| if consonants.include?(x[0])
+  sentence.split.map! {|x| if consonants.include?(x[0])
 
                           ((x[0]=="q") && (x[1]=="u")) ? x[2..-1] + x[0..1] + "ay":   #умова "qu"
                           consonants.include?(x[1]) && vowels.include?(x[2]) ? x[2..-1] + x[0..1] + "ay" : #умова початку з двох приголосних
