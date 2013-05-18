@@ -1,5 +1,7 @@
 class Timer
-  def seconds (timer = 0)
-    @timer = timer
+  attr_accessor :seconds
+
+  def initialize (seconds = 0)
+    @seconds = seconds
   end
 end
