@@ -1,2 +1,6 @@
-class dictionary
+class Dictionary
+  attr_accessor :entries
+  def initialize (entries = {})
+    @entries = entries
+  end
 end
