@@ -21,4 +21,15 @@ class Dictionary
     @entries.keys.include?(key_name)
   end
 
+  def find (word)
+    founded = {}
+
+    @entries.each do |key, value|
+      if key == word
+        founded[key] = value
+      end
+    end
+    founded
+  end
+
 end
