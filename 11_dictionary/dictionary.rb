@@ -17,7 +17,8 @@ class Dictionary
     @entries.keys.sort
   end
 
-  def include?(param)
+  def include?(key_name)
+    @entries.keys.include?(key_name)
   end
 
 end
