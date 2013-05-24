@@ -31,5 +31,15 @@ class Dictionary
     end
     founded
   end
+  
+  def printable
+    print_out = []
 
+    @entries.each do |key, value|
+      print_out << %Q{[#{key}] "#{value}"}
+    end
+
+    return print_out.sort.join("\n")
+
+  end
 end
