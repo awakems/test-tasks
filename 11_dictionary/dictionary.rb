@@ -25,7 +25,7 @@ class Dictionary
     founded = {}
 
     @entries.each do |key, value|
-      if key == word
+      if key =~ /^#{word}/
         founded[key] = value
       end
     end
