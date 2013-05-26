@@ -16,4 +16,15 @@ class RPNCalculator
     stack << (stack.pop + stack.pop)
   end
 
+  def minus
+    stack << (stack.pop - stack.pop)
+  end
+
+  def divide
+    stack << (stack.pop.to_f / stack.pop.to_f)
+  end
+
+  def times
+    stack << (stack.pop.to_f * stack.pop.to_f)
+  end
 end
