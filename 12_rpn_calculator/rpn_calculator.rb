@@ -48,4 +48,21 @@ class RPNCalculator
     token
   end
 
+  def evaluate(string)
+    tokens(string).each do |x|
+      if x == :+
+        plus
+      elsif x == :-
+        minus
+      elsif x == :/
+        divide
+      elsif x == :*
+        times
+      else
+        push(x)
+      end
+    end
+  value
+  end
+
 end
