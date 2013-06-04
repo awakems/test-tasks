@@ -35,4 +35,17 @@ class RPNCalculator
     end
     number
   end
+
+  def tokens(n)
+    token = []
+    n.split.collect do |x|
+      if x =~ /[- + \/ *]/
+        token << :"#{x}"
+      else
+        token << x.to_f
+      end
+    end
+    token
+  end
+
 end
