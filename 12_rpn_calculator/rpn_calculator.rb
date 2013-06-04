@@ -13,18 +13,26 @@ class RPNCalculator
   end
 
   def plus
-    stack << (stack.pop + stack.pop)
+    stack << (pop + pop)
   end
 
   def minus
-    stack << (stack.pop - stack.pop)
+    stack << (pop - pop)
   end
 
   def divide
-    stack << (stack.pop.to_f / stack.pop.to_f)
+    stack << (pop.to_f / pop.to_f)
   end
 
   def times
-    stack << (stack.pop.to_f * stack.pop.to_f)
+    stack << (pop.to_f * pop.to_f)
+  end
+
+  def pop
+    number = stack.pop
+    if number.nil?
+      raise "calculator is empty"
+    end
+    number
   end
 end
