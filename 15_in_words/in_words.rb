@@ -9,11 +9,59 @@ class Integer
     onesPlace = ['one','two','three','four','five','six','seven','eight','nine']
     tensPlace = ['ten','twenty','thirty','forty','fifty','sixty','seventy','eighty','ninety']
     teenagers = ['eleven','twelve','thirteen', 'fourteen', 'fifteen','sixteen', 'seventeen', 'eighteen', 'nineteen']
+
     left = self
+
+    write  = left / 1_000_000_000_000
+    left = left - write * 1_000_000_000_000
+
+    if write > 0
+      trillions = write.in_words
+      numString = numString + trillions + ' trillion'
+        if left > 0
+          numString = numString + ' '
+        end
+    end    
+
+    write  = left / 1_000_000_000
+    left = left - write * 1_000_000_000
+
+    if write > 0
+      billions = write.in_words
+      numString = numString + billions + ' billion'
+        if left > 0
+          numString = numString + ' '
+        end
+    end    
+
+
+    write  = left / 1_000_000
+    left = left - write * 1_000_000
+
+    if write > 0
+      millions = write.in_words
+      numString = numString + millions + ' million'
+        if left > 0
+          numString = numString + ' '
+        end
+    end    
+
+
+    write  = left / 1000
+    left = left - write * 1000
+
+    if write > 0
+      thousands = write.in_words
+      numString = numString + thousands + ' thousand'
+        if left > 0
+          numString = numString + ' '
+        end
+    end
+
     write = left / 100
     left = left - write * 100
 
-    if write > 0
+    if write > 0 
       hundreds = write.in_words
       numString = numString + hundreds + ' hundred'
         if left > 0
@@ -41,7 +89,7 @@ class Integer
     left = 0
 
     if write > 0
-      numString = numString + onesPlace[write-1]
+      numString = numString + onesPlace[write - 1]
     end
 
   numString
