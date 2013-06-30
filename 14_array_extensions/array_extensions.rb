@@ -10,6 +10,11 @@ class Array
     if self == []
       return []
     end
+    
+    self.map {|element| element * element}
+  end
   
+  def square!
+    self.map! {|element| element * element}
   end
 end
